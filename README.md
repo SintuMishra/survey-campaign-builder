@@ -1,0 +1,78 @@
+# Simplified Survey Campaign Builder
+
+A React + TypeScript + Vite frontend technical assessment implementing configurable survey content, styling controls, and a live mobile preview.
+
+## Features
+
+- Dynamic survey question count
+- Dynamic add/delete options with minimum 2 options
+- Additional comments toggle
+- Mock conditional redirect logic
+- Configurable per-question button text
+- Optional Thank You page
+- Media upload preview for PNG/JPG/JPEG/GIF
+- Lottie JSON upload placeholder
+- URL redirect
+- Live styling controls for:
+  - background/backdrop
+  - popup corner radius
+  - question title
+  - subtitle
+  - option layout
+  - selected/unselected option styles
+  - comments
+  - CTA button
+  - cross button
+  - Thank You title/subtitle/image/button
+- Functional mobile preview
+- Question navigation
+- Checkbox/radio style selection
+- Thank You flow
+- Restart preview with configured delay
+
+## Setup
+
+```bash
+npm install
+npm run dev
+```
+
+Production build:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Folder Structure
+
+```text
+src/
+  components/
+    content/
+    layout/
+    preview/
+    styling/
+    ui/
+  context/
+  data/
+  types/
+  utils/
+```
+
+## Architecture
+
+Campaign configuration is stored in `CampaignContext` using `useReducer`.
+
+Both Content and Styling editors update the same campaign state. The mobile preview reads directly from that state, so changes are reflected immediately without a Save button.
+
+## Suggested final polish
+
+Before submission:
+- Add real Lottie rendering using a lightweight Lottie library if desired
+- Add persisted localStorage state if desired
+- Improve conditional-logic UX
+- Add small accessibility improvements
+- Add tests
+- Deploy with Vercel/Netlify
+- Add screenshots and deployment URL here
