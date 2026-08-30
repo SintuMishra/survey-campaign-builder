@@ -19,7 +19,7 @@ A React + TypeScript + Vite frontend technical assessment implementing configura
 - Configurable per-question button text
 - Optional Thank You page
 - Media upload preview for PNG/JPG/JPEG/GIF
-- Lottie JSON upload placeholder
+- Lottie JSON rendering using lottie-web/light
 - URL redirect
 - Live styling controls for:
   - background/backdrop
@@ -73,14 +73,3 @@ src/
 Campaign configuration is stored in `CampaignContext` using `useReducer`.
 
 Both Content and Styling editors update the same campaign state. The mobile preview reads directly from that state, so changes are reflected immediately without a Save button.
-
-## Suggested final polish
-
-Before submission:
-- Add real Lottie rendering using a lightweight Lottie library if desired
-- Add persisted localStorage state if desired
-- Improve conditional-logic UX
-- Add small accessibility improvements
-- Add tests
-- Deploy with Vercel/Netlify
-- Add screenshots and deployment URL here
