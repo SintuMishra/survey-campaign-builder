@@ -1,5 +1,13 @@
 # Simplified Survey Campaign Builder
 
+
+## Live Demo
+
+**Deployment:** https://survey-campaign-builder-eight.vercel.app/
+
+**GitHub Repository:** https://github.com/SintuMishra/survey-campaign-builder
+
+
 A React + TypeScript + Vite frontend technical assessment implementing configurable survey content, styling controls, and a live mobile preview.
 
 ## Features
