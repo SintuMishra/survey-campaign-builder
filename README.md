@@ -1,5 +1,6 @@
 # Simplified Survey Campaign Builder
 
+A configurable survey campaign builder built with React, TypeScript, and Vite. It provides content and styling controls alongside a live mobile preview, allowing survey changes to be visualized instantly.
 
 ## Live Demo
 
@@ -7,45 +8,61 @@
 
 **GitHub Repository:** https://github.com/SintuMishra/survey-campaign-builder
 
-
-A React + TypeScript + Vite frontend technical assessment implementing configurable survey content, styling controls, and a live mobile preview.
-
 ## Features
 
+### Survey Content
+
 - Dynamic survey question count
-- Dynamic add/delete options with minimum 2 options
+- Add and remove options with a minimum of two options per question
 - Additional comments toggle
-- Mock conditional redirect logic
-- Configurable per-question button text
+- Conditional question redirect logic
+- Configurable submit button text
 - Optional Thank You page
-- Media upload preview for PNG/JPG/JPEG/GIF
-- Lottie JSON rendering using lottie-web/light
-- URL redirect
-- Live styling controls for:
-  - background/backdrop
-  - popup corner radius
-  - question title
-  - subtitle
-  - option layout
-  - selected/unselected option styles
-  - comments
-  - CTA button
-  - cross button
-  - Thank You title/subtitle/image/button
-- Functional mobile preview
+- PNG, JPG, JPEG, and GIF media preview
+- Lottie JSON rendering using `lottie-web/light`
+- Configurable URL redirect
+
+### Styling
+
+Live styling controls for:
+
+- Background and backdrop
+- Popup corner radius
+- Question title and subtitle
+- Option layout
+- Selected and unselected option states
+- Additional comments
+- CTA button
+- Cross button
+- Thank You title, subtitle, media, and button
+
+### Live Preview
+
+- Real-time mobile preview
 - Question navigation
-- Checkbox/radio style selection
+- Radio and checkbox selection
+- Conditional question flow
 - Thank You flow
-- Restart preview with configured delay
+- Preview restart with configured delay
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- CSS
+- `lottie-web`
 
 ## Setup
+
+Clone the repository and install the dependencies:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Production build:
+For a production build:
 
 ```bash
 npm run build
@@ -70,6 +87,6 @@ src/
 
 ## Architecture
 
-Campaign configuration is stored in `CampaignContext` using `useReducer`.
+Campaign configuration is managed through `CampaignContext` using React Context and `useReducer`.
 
-Both Content and Styling editors update the same campaign state. The mobile preview reads directly from that state, so changes are reflected immediately without a Save button.
+The Content and Styling editors update the same campaign state. The mobile preview reads directly from this state, allowing configuration and styling changes to appear immediately without requiring a separate save action.
